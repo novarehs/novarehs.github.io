@@ -3,54 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novare Health Solutions LLC | Psychiatric Telehealth</title>
+    <title>Novare Health Solutions LLC | Outpatient Behavioral Health & Psychiatry</title>
     <style>
         :root {
-            --primary: #1e3d59;
-            --secondary: #17b978;
-            --dark: #111;
-            --light: #f5f7fa;
-            --gray: #666;
+            --primary: #1a365d;
+            --primary-light: #2a4365;
+            --accent: #2f855a;
+            --accent-hover: #22543d;
+            --dark: #2d3748;
+            --light: #f7fafc;
+            --border: #e2e8f0;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
         body { background: var(--light); color: var(--dark); line-height: 1.6; }
-        header { background: white; padding: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: bold; color: var(--primary); font-size: 1.4rem; text-decoration: none; }
-        .nav-links a { margin-left: 1.5rem; text-decoration: none; color: var(--gray); font-weight: 500; transition: 0.3s; }
+        header { background: white; padding: 1.25rem 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo-group { display: flex; flex-direction: column; text-decoration: none; }
+        .logo-main { font-weight: 700; color: var(--primary); font-size: 1.5rem; letter-spacing: -0.5px; }
+        .logo-sub { font-size: 0.75rem; text-transform: uppercase; color: var(--accent); letter-spacing: 1px; font-weight: 600; margin-top: -2px; }
+        .nav-links a { margin-left: 2rem; text-decoration: none; color: #4a5568; font-weight: 500; transition: color 0.2s; }
         .nav-links a:hover { color: var(--primary); }
-        .hero { background: linear-gradient(135deg, #1e3d59 0%, #17b978 100%); color: white; padding: 5rem 1.5rem; text-align: center; }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; }
-        .hero p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
-        .btn-main { background: white; color: var(--primary); padding: 0.8rem 2rem; border-radius: 5px; font-weight: bold; text-decoration: none; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s; display: inline-block; }
-        .btn-main:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
-        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem; }
-        .about-grid { display: grid; grid-template-columns: 250px 1fr; gap: 3rem; align-items: start; }
-        .profile-photo { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 5px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        h2 { color: var(--primary); font-size: 2rem; margin-bottom: 1.5rem; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 1.5rem; }
-        .service-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); }
-        .service-card h3 { color: var(--primary); margin-bottom: 1rem; }
-        .focus-list { margin-top: 1.5rem; padding-left: 1.2rem; }
-        .focus-list li { margin-bottom: 0.5rem; }
-        .hub-box { background: white; padding: 3rem 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid #e1e8ed; text-align: center; max-width: 800px; margin: 0 auto; }
-        .route-card { background: var(--light); padding: 1.5rem; border-radius: 6px; margin: 1.5rem 0; text-align: left; border-left: 4px solid var(--primary); }
-        .route-card.grow { border-left-color: var(--secondary); }
-        .route-card h4 { color: var(--dark); font-size: 1.1rem; margin-bottom: 0.5rem; }
-        .route-card p { font-size: 0.95rem; color: var(--gray); margin-bottom: 1rem; }
-        .btn-portal { display: inline-block; background: var(--primary); color: white; padding: 0.6rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
-        .btn-portal.grow { background: var(--secondary); }
-        .btn-portal:hover { opacity: 0.9; }
-        .contact-details { margin-top: 2rem; font-size: 1.1rem; color: var(--primary); font-weight: 500; }
-        footer { background: #111; color: #aaa; padding: 4rem 1.5rem; font-size: 0.85rem; border-top: 5px solid var(--primary); }
-        .footer-content { max-width: 1100px; margin: 0 auto; }
-        .disclaimer-box { background: #222; padding: 1.5rem; border-radius: 5px; margin-bottom: 2rem; border-left: 4px solid #cc0000; color: #ccc; }
-        .disclaimer-box strong { color: white; display: block; margin-bottom: 0.5rem; }
-        .footer-bottom { border-top: 1px solid #333; padding-top: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; }
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 7rem 1.5rem; text-align: center; position: relative; }
+        .hero-content { max-width: 800px; margin: 0 auto; }
+        .hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1.25rem; letter-spacing: -1px; line-height: 1.15; }
+        .hero p { font-size: 1.25rem; margin-bottom: 2.5rem; color: #e2e8f0; font-weight: 400; }
+        .btn-primary { background: var(--accent); color: white; padding: 0.9rem 2.25rem; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 1.1rem; border: none; cursor: pointer; transition: all 0.2s; display: inline-block; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 5rem 1.5rem; }
+        .about-section { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: start; }
+        .profile-container { text-align: center; }
+        .profile-photo { width: 240px; height: 240px; border-radius: 8px; object-fit: cover; border: 1px solid var(--border); box-shadow: 0 4px 20px -2px rgba(0,0,0,0.08); background: #fff; }
+        .profile-title { font-size: 0.9rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 1rem; }
+        .section-title { font-size: 2.25rem; color: var(--primary); font-weight: 700; margin-bottom: 1.5rem; letter-spacing: -0.5px; }
+        .about-text p { font-size: 1.1rem; color: #4a5568; margin-bottom: 1.5rem; }
+        .principles-section { background: white; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 5rem 1.5rem; }
+        .tabs-container { max-width: 850px; margin: 0 auto; }
+        .tabs-header { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; border-bottom: 2px solid var(--border); padding-bottom: 1rem; }
+        .tab-btn { background: none; border: none; padding: 0.75rem 2rem; font-size: 1.1rem; font-weight: 600; color: #718096; cursor: pointer; border-radius: 4px; transition: all 0.2s; }
+        .tab-btn:hover { color: var(--primary); background: var(--light); }
+        .tab-btn.active { color: white; background: var(--primary); }
+        .tab-content { background: var(--light); padding: 2.5rem; border-radius: 8px; border: 1px solid var(--border); display: none; min-height: 180px; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease; }
+        .tab-content h3 { color: var(--primary); font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .tab-content p { font-size: 1.1rem; color: #4a5568; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .service-card { background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); border-left: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .service-card h3 { color: var(--primary); font-size: 1.35rem; margin-bottom: 1rem; }
+        .service-card p { color: #4a5568; font-size: 1rem; }
+        .intake-box { background: white; padding: 4rem 2rem; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); text-align: center; max-width: 900px; margin: 0 auto; }
+        .intake-box p { font-size: 1.1rem; color: #4a5568; margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .contact-footer-grid { margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: left; }
+        .footer-card h5 { color: var(--primary); font-size: 1.05rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .footer-card p { font-size: 1rem; color: #4a5568; }
+        footer { background: #1a202c; color: #a0aec0; padding: 4rem 1.5rem; font-size: 0.85rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .alert-panel { background: #2d3748; padding: 1.75rem; border-radius: 6px; margin-bottom: 2rem; border-left: 4px solid #e53e3e; color: #cbd5e0; }
+        .alert-panel strong { color: white; display: block; margin-bottom: 0.5rem; font-size: 1rem; }
+        .bottom-bar { border-top: 1px solid #4a5568; padding-top: 1.5rem; margin-top: 2rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
         @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 1rem; }
-            .about-grid { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+            .nav-container { flex-direction: column; gap: 1rem; text-align: center; }
+            .nav-links a { margin: 0 1rem; }
+            .about-section { grid-template-columns: 1fr; justify-items: center; text-align: center; }
             .hero h1 { font-size: 2rem; }
+            .tabs-header { flex-direction: column; gap: 0.5rem; }
+            .tab-btn { width: 100%; text-align: center; }
         }
     </style>
 </head>
@@ -58,93 +75,51 @@
 
     <header>
         <nav class="nav-container">
-            <a href="#" class="logo">Novare Health Solutions</a>
+            <a href="#" class="logo-group">
+                <span class="logo-main">Novare Health Solutions</span>
+                <span class="logo-sub">Outpatient Behavioral Health</span>
+            </a>
             <div class="nav-links">
-                <a href="#about">About</a>
+                <a href="#about">About Us</a>
+                <a href="#principles">Philosophy</a>
                 <a href="#services">Specialties</a>
-                <a href="#booking">Insurance & Booking</a>
+                <a href="#intake">Consultation</a>
             </div>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Compassionate Psychiatric Care, Tailored to Your Life.</h1>
-        <p>Novare Health Solutions LLC | 100% Virtual Psychiatric Telehealth in Maryland</p>
-        <a href="#booking" class="btn-main">Schedule an Appointment</a>
+        <div class="hero-content">
+            <h1>Clinical Excellence in Outpatient Behavioral Health</h1>
+            <p>Providing independent, comprehensive psychiatric evaluations and specialized medication management across the State of Maryland.</p>
+            <a href="#intake" class="btn-primary">Request a Consultation</a>
+        </div>
     </section>
 
     <section id="about" class="container">
-        <div class="about-grid">
-            <img src="profile.jpg" alt="Oluchi Ukah, PMHNP-BC" class="profile-photo">
-            <div>
-                <h2>Meet Oluchi Ukah, MSN, PMHNP-BC</h2>
-                <p style="font-size: 1.1rem; margin-top: 1rem; color: #333;">
-                    Hi, I’m Oluchi Ukah, a board-certified Psychiatric-Mental Health Nurse Practitioner and the founder of Novare Health Solutions LLC. I hold an advanced nursing degree from Walden University, where I specialized in cutting-edge psychiatric care. My practice focuses on providing comprehensive virtual mental health evaluations and personalized medication management for adults navigating depression, anxiety, panic attacks, and ADHD. To respect your busy daytime routine, I offer secure, HIPAA-compliant video telehealth sessions during convenient evening and Saturday hours.
-                </p>
+        <div class="about-section">
+            <div class="profile-container">
+                <img src="profile.jpg" alt="Oluchi Ukah, PMHNP-BC" class="profile-photo">
+                <div class="profile-title">Clinical Director</div>
+            </div>
+            <div class="about-text">
+                <h2 class="section-title">Professional Care and Guidance</h2>
+                <p>Novare Health Solutions LLC is a dedicated outpatient psychiatric practice providing specialized behavioral healthcare. Led by Oluchi Ukah, a board-certified Psychiatric-Mental Health Nurse Practitioner, our practice delivers thorough diagnostic evaluations and personalized clinical interventions for adults managing complex mental health conditions.</p>
+                <p>We believe that mental wellness requires a systematic, collaborative, and evidence-based framework. Our practice works closely with individuals to develop targeted care paths that stabilize symptoms, restore cognitive clarity, and foster long-term psychological growth. To support modern work and personal schedules, all consultations are conducted via a secure, fully encrypted virtual telehealth platform during dedicated evening and weekend hours.</p>
             </div>
         </div>
     </section>
 
-    <section id="services" style="background: white;">
-        <div class="container">
-            <h2>Our Clinical Specialties</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Psychiatric Evaluations</h3>
-                    <p>Every treatment pathway begins with a thorough, one-on-one initial diagnostic evaluation. Together, we will review your symptoms, history, and goals to build your baseline care map.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Medication Management</h3>
-                    <p>When indicated, psychopharmacology is a powerful tool. We provide careful, conservative prescribing, ongoing monitoring, and routine follow-ups to optimize your strategy while minimizing side effects.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Supportive Therapy</h3>
-                    <p>Medication is most effective when paired with emotional insight. Every follow-up integrates supportive psychotherapy and holistic coping frameworks to build lasting resilience.</p>
-                </div>
+    <section id="principles" class="principles-section">
+        <div class="tabs-container">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="switchTab(event, 'mission')">Our Mission</button>
+                <button class="tab-btn" onclick="switchTab(event, 'vision')">Our Vision</button>
+                <button class="tab-btn" onclick="switchTab(event, 'values')">Core Values</button>
             </div>
-            <div style="margin-top: 3rem;">
-                <h3 style="color: var(--primary);">Conditions We Safely Manage:</h3>
-                <ul class="focus-list" style="color: #444; font-size: 1.05rem;">
-                    <li>Depression and Persistent Mood Disturbances</li>
-                    <li>Generalized Anxiety, Panic Attacks, and Social Phobias</li>
-                    <li>Attention-Deficit/Hyperactivity Disorder (ADHD)</li>
-                    <li>Sleep-Wake Disruptions and Chronic Insomnia</li>
-                    <li>Stress Management and Maladaptive Life Transitions</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="booking" class="container">
-        <div class="hub-box">
-            <h2>Select Your Insurance to Book</h2>
-            <p style="color: var(--gray); margin-bottom: 2rem;">To ensure seamless billing and the lowest out-of-pocket copay, Novare Health Solutions LLC routes scheduling through optimized network portals. Please select your insurance route below:</p>
             
-            <div class="route-card">
-                <h4>Route A: Primary Commercial Insurance Plans</h4>
-                <p>CareFirst BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Oxford, Oscar</p>
-                <a href="#" class="btn-portal" target="_blank">Book Online via Headway</a>
+            <div id="mission" class="tab-content active">
+                <h3>🎯 Mission Statement</h3>
+                <p>To deliver advanced, compassionate, and evidence-based outpatient psychiatric care that empowers individuals to overcome mental health challenges, restore stability, and rebuild meaningful balance in their daily lives.</p>
             </div>
 
-            <div class="route-card grow">
-                <h4>Route B: Alternative Commercial & Managed Plans</h4>
-                <p>Humana, Tricare, Optum, or regional plans handled via secondary networks</p>
-                <a href="#" class="btn-portal grow" target="_blank">Book Online via Grow Therapy</a>
-            </div>
-
-            <div class="route-card" style="border-left-color: var(--gray);">
-                <h4>Route C: Out-of-Network & Private Self-Pay</h4>
-                <p>For clients paying out-of-pocket or seeking independent billing superbills</p>
-                <a href="mailto:info@://novarehs.com Booking Request" class="btn-portal" style="background: var(--gray);">Request Self-Pay Booking Slot</a>
-            </div>
-
-            <div class="contact-details">
-                <p>Practice Phone: (240) 822-9130 | Practice Email: info@novarehs.com</p>
-                <p style="font-size: 0.9rem; color: var(--gray); margin-top: 0.5rem;">Practice Coordinates: 306 W Redwood St, #4332, Baltimore, MD 21201</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="disclaimer-box">
