@@ -1,125 +1,3946 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novare Health Solutions LLC | Outpatient Behavioral Health & Psychiatry</title>
+
+    <meta name="description"
+        content="Novare Health Solutions LLC provides compassionate outpatient psychiatric evaluation and medication management for adults in Maryland through telehealth and in-person care.">
+
+    <meta name="keywords"
+        content="psychiatry Maryland, psychiatric evaluation Maryland, medication management Maryland, PMHNP Maryland, telepsychiatry Maryland, behavioral health Maryland, adult psychiatry Baltimore">
+
+    <meta name="author" content="Novare Health Solutions LLC">
+
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title"
+        content="Novare Health Solutions LLC | Outpatient Psychiatry & Behavioral Health">
+
+    <meta property="og:description"
+        content="Compassionate, evidence-based outpatient psychiatric care for adults in Maryland. Telehealth and in-person care options available.">
+
+    <meta property="og:type" content="website">
+
+    <title>
+        Novare Health Solutions LLC | Outpatient Psychiatry & Behavioral Health
+    </title>
+
+
     <style>
+
+        /* =========================================================
+           COLOR SYSTEM
+        ========================================================= */
+
         :root {
-            --primary: #1a365d;
-            --primary-light: #2a4365;
-            --accent: #2f855a;
-            --accent-hover: #22543d;
-            --dark: #2d3748;
-            --light: #f7fafc;
-            --border: #e2e8f0;
+
+            --primary: #183B56;
+            --primary-dark: #102A3D;
+            --primary-light: #2C5875;
+
+            --accent: #2F855A;
+            --accent-dark: #236B47;
+            --accent-light: #E9F5EF;
+
+            --text: #263746;
+            --text-light: #526574;
+
+            --white: #FFFFFF;
+            --light: #F7FAFC;
+            --light-blue: #F1F6F9;
+
+            --border: #DDE6EC;
+
+            --danger: #B42318;
+            --danger-light: #FEF3F2;
+
+            --shadow-sm:
+                0 4px 12px rgba(24, 59, 86, 0.07);
+
+            --shadow-md:
+                0 10px 30px rgba(24, 59, 86, 0.10);
+
+            --radius: 10px;
+
+            --max-width: 1180px;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
-        body { background: var(--light); color: var(--dark); line-height: 1.6; }
-        header { background: white; padding: 1.25rem 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo-group { display: flex; flex-direction: column; text-decoration: none; }
-        .logo-main { font-weight: 700; color: var(--primary); font-size: 1.5rem; letter-spacing: -0.5px; }
-        .logo-sub { font-size: 0.75rem; text-transform: uppercase; color: var(--accent); letter-spacing: 1px; font-weight: 600; margin-top: -2px; }
-        .nav-links a { margin-left: 2rem; text-decoration: none; color: #4a5568; font-weight: 500; transition: color 0.2s; }
-        .nav-links a:hover { color: var(--primary); }
-        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 7rem 1.5rem; text-align: center; position: relative; }
-        .hero-content { max-width: 800px; margin: 0 auto; }
-        .hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1.25rem; letter-spacing: -1px; line-height: 1.15; }
-        .hero p { font-size: 1.25rem; margin-bottom: 2.5rem; color: #e2e8f0; font-weight: 400; }
-        .btn-primary { background: var(--accent); color: white; padding: 0.9rem 2.25rem; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 1.1rem; border: none; cursor: pointer; transition: all 0.2s; display: inline-block; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 5rem 1.5rem; }
-        .about-section { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: start; }
-        .profile-container { text-align: center; }
-        .profile-photo { width: 240px; height: 240px; border-radius: 8px; object-fit: cover; border: 1px solid var(--border); box-shadow: 0 4px 20px -2px rgba(0,0,0,0.08); background: #fff; }
-        .profile-title { font-size: 0.9rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 1rem; }
-        .section-title { font-size: 2.25rem; color: var(--primary); font-weight: 700; margin-bottom: 1.5rem; letter-spacing: -0.5px; }
-        .about-text p { font-size: 1.1rem; color: #4a5568; margin-bottom: 1.5rem; }
-        .principles-section { background: white; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 5rem 1.5rem; }
-        .tabs-container { max-width: 850px; margin: 0 auto; }
-        .tabs-header { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; border-bottom: 2px solid var(--border); padding-bottom: 1rem; }
-        .tab-btn { background: none; border: none; padding: 0.75rem 2rem; font-size: 1.1rem; font-weight: 600; color: #718096; cursor: pointer; border-radius: 4px; transition: all 0.2s; }
-        .tab-btn:hover { color: var(--primary); background: var(--light); }
-        .tab-btn.active { color: white; background: var(--primary); }
-        .tab-content { background: var(--light); padding: 2.5rem; border-radius: 8px; border: 1px solid var(--border); display: none; min-height: 180px; }
-        .tab-content.active { display: block; animation: fadeIn 0.4s ease; }
-        .tab-content h3 { color: var(--primary); font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
-        .tab-content p { font-size: 1.1rem; color: #4a5568; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .service-card { background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); border-left: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-        .service-card h3 { color: var(--primary); font-size: 1.35rem; margin-bottom: 1rem; }
-        .service-card p { color: #4a5568; font-size: 1rem; }
-        .intake-box { background: white; padding: 4rem 2rem; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); text-align: center; max-width: 900px; margin: 0 auto; }
-        .intake-box p { font-size: 1.1rem; color: #4a5568; margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto; }
-        .contact-footer-grid { margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: left; }
-        .footer-card h5 { color: var(--primary); font-size: 1.05rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
-        .footer-card p { font-size: 1rem; color: #4a5568; }
-        footer { background: #1a202c; color: #a0aec0; padding: 4rem 1.5rem; font-size: 0.85rem; }
-        .footer-container { max-width: 1200px; margin: 0 auto; }
-        .alert-panel { background: #2d3748; padding: 1.75rem; border-radius: 6px; margin-bottom: 2rem; border-left: 4px solid #e53e3e; color: #cbd5e0; }
-        .alert-panel strong { color: white; display: block; margin-bottom: 0.5rem; font-size: 1rem; }
-        .bottom-bar { border-top: 1px solid #4a5568; padding-top: 1.5rem; margin-top: 2rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+
+        body {
+
+            font-family:
+                "Segoe UI",
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                sans-serif;
+
+            background: var(--white);
+
+            color: var(--text);
+
+            line-height: 1.7;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        a {
+            color: inherit;
+        }
+
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+
+        /* =========================================================
+           ACCESSIBILITY
+        ========================================================= */
+
+        .skip-link {
+
+            position: absolute;
+
+            left: -9999px;
+
+            top: 10px;
+
+            background: var(--primary);
+
+            color: white;
+
+            padding: 10px 15px;
+
+            z-index: 9999;
+        }
+
+
+        .skip-link:focus {
+            left: 10px;
+        }
+
+
+        :focus-visible {
+
+            outline: 3px solid #7BC9A0;
+
+            outline-offset: 3px;
+        }
+
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        .container {
+
+            width: min(
+                100% - 40px,
+                var(--max-width)
+            );
+
+            margin: 0 auto;
+        }
+
+
+        section {
+            padding: 90px 0;
+        }
+
+
+        .section-label {
+
+            color: var(--accent);
+
+            text-transform: uppercase;
+
+            font-size: 0.78rem;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .section-title {
+
+            color: var(--primary);
+
+            font-size: clamp(
+                2rem,
+                4vw,
+                2.75rem
+            );
+
+            line-height: 1.2;
+
+            margin-bottom: 18px;
+
+            letter-spacing: -0.5px;
+        }
+
+
+        .section-intro {
+
+            max-width: 760px;
+
+            color: var(--text-light);
+
+            font-size: 1.08rem;
+        }
+
+
+        .text-center {
+            text-align: center;
+        }
+
+
+        .text-center .section-intro {
+
+            margin-left: auto;
+
+            margin-right: auto;
+        }
+
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 13px 25px;
+
+            border-radius: 7px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            font-size: 0.98rem;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        .btn-primary {
+
+            background: var(--accent);
+
+            color: white;
+
+            box-shadow:
+                0 5px 14px rgba(
+                    47,
+                    133,
+                    90,
+                    0.20
+                );
+        }
+
+
+        .btn-primary:hover {
+
+            background: var(--accent-dark);
+
+            transform: translateY(-2px);
+        }
+
+
+        .btn-secondary {
+
+            background: white;
+
+            color: var(--primary);
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.5
+                );
+        }
+
+
+        .btn-secondary:hover {
+
+            background: var(--light);
+
+            transform: translateY(-2px);
+        }
+
+
+        .btn-outline {
+
+            background: transparent;
+
+            color: var(--primary);
+
+            border:
+                1px solid
+                var(--primary);
+        }
+
+
+        .btn-outline:hover {
+
+            background: var(--primary);
+
+            color: white;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.97
+                );
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+            box-shadow:
+                0 2px 10px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.04
+                );
+        }
+
+
+        .nav-container {
+
+            min-height: 76px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+        }
+
+
+        .logo {
+
+            text-decoration: none;
+
+            display: flex;
+
+            flex-direction: column;
+
+            line-height: 1.1;
+        }
+
+
+        .logo-main {
+
+            color: var(--primary);
+
+            font-size: 1.45rem;
+
+            font-weight: 800;
+
+            letter-spacing: -0.5px;
+        }
+
+
+        .logo-sub {
+
+            color: var(--accent);
+
+            font-size: 0.68rem;
+
+            font-weight: 800;
+
+            letter-spacing: 1.1px;
+
+            text-transform: uppercase;
+
+            margin-top: 5px;
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+        }
+
+
+        .nav-links a {
+
+            color: var(--text);
+
+            text-decoration: none;
+
+            font-size: 0.92rem;
+
+            font-weight: 600;
+        }
+
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+
+        .nav-cta {
+
+            background: var(--accent);
+
+            color: white !important;
+
+            padding: 9px 16px;
+
+            border-radius: 6px;
+        }
+
+
+        .nav-cta:hover {
+            background: var(--accent-dark);
+        }
+
+
+        .menu-toggle {
+
+            display: none;
+
+            border: none;
+
+            background: transparent;
+
+            font-size: 1.7rem;
+
+            color: var(--primary);
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary-dark),
+                    var(--primary)
+                );
+
+            color: white;
+
+            padding: 105px 0 95px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+
+            height: 500px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.035
+                );
+
+            right: -180px;
+
+            top: -180px;
+        }
+
+
+        .hero-content {
+
+            max-width: 850px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .hero-badge {
+
+            display: inline-flex;
+
+            padding: 7px 14px;
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.22
+                );
+
+            border-radius: 30px;
+
+            color: #D9F1E4;
+
+            font-size: 0.82rem;
+
+            font-weight: 700;
+
+            margin-bottom: 22px;
+        }
+
+
+        .hero h1 {
+
+            font-size: clamp(
+                2.45rem,
+                6vw,
+                4.2rem
+            );
+
+            line-height: 1.08;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .hero h1 span {
+            color: #A8DDBE;
+        }
+
+
+        .hero-description {
+
+            color: #E2EBF0;
+
+            font-size: clamp(
+                1.05rem,
+                2vw,
+                1.22rem
+            );
+
+            max-width: 760px;
+
+            margin-bottom: 32px;
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 13px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .hero-note {
+
+            margin-top: 28px;
+
+            font-size: 0.87rem;
+
+            color: #C7D5DE;
+        }
+
+
+        /* =========================================================
+           TRUST BAR
+        ========================================================= */
+
+        .trust-bar {
+
+            background: white;
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+            box-shadow: var(--shadow-sm);
+        }
+
+
+        .trust-items {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            text-align: center;
+        }
+
+
+        .trust-item {
+
+            padding: 25px 15px;
+
+            border-right:
+                1px solid
+                var(--border);
+
+            color: var(--primary);
+
+            font-weight: 700;
+
+            font-size: 0.93rem;
+        }
+
+
+        .trust-item:last-child {
+            border-right: none;
+        }
+
+
+        .trust-icon {
+
+            display: block;
+
+            font-size: 1.3rem;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about {
+            background: white;
+        }
+
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.1fr
+                0.9fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .about-text p {
+
+            color: var(--text-light);
+
+            margin-bottom: 18px;
+        }
+
+
+        .about-highlight {
+
+            background: var(--light-blue);
+
+            border-left:
+                4px solid
+                var(--accent);
+
+            padding: 22px;
+
+            border-radius: 7px;
+
+            margin-top: 25px;
+
+            color: var(--primary);
+
+            font-weight: 600;
+        }
+
+
+        .about-card {
+
+            background: var(--light);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: var(--radius);
+
+            padding: 35px;
+
+            box-shadow: var(--shadow-sm);
+        }
+
+
+        .about-card h3 {
+
+            color: var(--primary);
+
+            margin-bottom: 20px;
+
+            font-size: 1.35rem;
+        }
+
+
+        .check-list {
+
+            list-style: none;
+        }
+
+
+        .check-list li {
+
+            position: relative;
+
+            padding-left: 28px;
+
+            margin-bottom: 13px;
+
+            color: var(--text-light);
+        }
+
+
+        .check-list li::before {
+
+            content: "✓";
+
+            position: absolute;
+
+            left: 0;
+
+            color: var(--accent);
+
+            font-weight: 900;
+        }
+
+
+        /* =========================================================
+           SERVICES
+        ========================================================= */
+
+        .services {
+            background: var(--light);
+        }
+
+
+        .services-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+
+            margin-top: 45px;
+        }
+
+
+        .service-card {
+
+            background: white;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: var(--radius);
+
+            padding: 30px;
+
+            box-shadow: var(--shadow-sm);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        .service-card:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow: var(--shadow-md);
+        }
+
+
+        .service-icon {
+
+            width: 48px;
+
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 9px;
+
+            background: var(--accent-light);
+
+            color: var(--accent);
+
+            font-size: 1.4rem;
+
+            margin-bottom: 20px;
+        }
+
+
+        .service-card h3 {
+
+            color: var(--primary);
+
+            margin-bottom: 10px;
+
+            font-size: 1.22rem;
+        }
+
+
+        .service-card p {
+
+            color: var(--text-light);
+
+            font-size: 0.95rem;
+        }
+
+
+        /* =========================================================
+           CONDITIONS
+        ========================================================= */
+
+        .conditions {
+            background: white;
+        }
+
+
+        .conditions-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px;
+
+            margin-top: 38px;
+
+            max-width: 900px;
+        }
+
+
+        .condition {
+
+            padding: 17px 20px;
+
+            background: var(--light);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 7px;
+
+            color: var(--primary);
+
+            font-weight: 600;
+        }
+
+
+        .condition::before {
+
+            content: "•";
+
+            color: var(--accent);
+
+            margin-right: 10px;
+        }
+
+
+        .scope-note {
+
+            margin-top: 25px;
+
+            color: var(--text-light);
+
+            font-size: 0.9rem;
+
+            max-width: 850px;
+        }
+
+
+        /* =========================================================
+           PROVIDER
+        ========================================================= */
+
+        .provider {
+            background: var(--light-blue);
+        }
+
+
+        .provider-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                0.75fr
+                1.25fr;
+
+            gap: 65px;
+
+            align-items: center;
+        }
+
+
+        .provider-photo {
+
+            min-height: 420px;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #DCE8EE,
+                    #B9CCD6
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: var(--primary);
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+
+        .provider-photo-placeholder {
+
+            font-weight: 700;
+
+            opacity: 0.7;
+        }
+
+
+        .provider-content h2 {
+
+            color: var(--primary);
+
+            font-size: 2.4rem;
+
+            margin-bottom: 5px;
+        }
+
+
+        .credentials {
+
+            color: var(--accent);
+
+            font-weight: 800;
+
+            margin-bottom: 20px;
+        }
+
+
+        .provider-content p {
+
+            color: var(--text-light);
+
+            margin-bottom: 18px;
+        }
+
+
+        .credential-list {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 25px;
+        }
+
+
+        .credential {
+
+            background: white;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 30px;
+
+            padding: 7px 14px;
+
+            color: var(--primary);
+
+            font-size: 0.84rem;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           HOW IT WORKS
+        ========================================================= */
+
+        .process {
+            background: white;
+        }
+
+
+        .process-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+
+            margin-top: 45px;
+        }
+
+
+        .process-card {
+
+            position: relative;
+
+            padding: 30px 20px;
+
+            text-align: center;
+        }
+
+
+        .process-number {
+
+            width: 48px;
+
+            height: 48px;
+
+            margin: 0 auto 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+
+            color: white;
+
+            font-weight: 800;
+        }
+
+
+        .process-card h3 {
+
+            color: var(--primary);
+
+            font-size: 1.08rem;
+
+            margin-bottom: 8px;
+        }
+
+
+        .process-card p {
+
+            color: var(--text-light);
+
+            font-size: 0.91rem;
+        }
+
+
+        /* =========================================================
+           TELEHEALTH
+        ========================================================= */
+
+        .telehealth {
+
+            background: var(--primary);
+
+            color: white;
+        }
+
+
+        .telehealth-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+
+        .telehealth .section-label {
+            color: #9DD9B5;
+        }
+
+
+        .telehealth .section-title {
+            color: white;
+        }
+
+
+        .telehealth p {
+            color: #D5E1E8;
+        }
+
+
+        .telehealth-list {
+
+            list-style: none;
+
+            margin-top: 25px;
+        }
+
+
+        .telehealth-list li {
+
+            margin-bottom: 12px;
+
+            color: #E4EDF2;
+
+            padding-left: 27px;
+
+            position: relative;
+        }
+
+
+        .telehealth-list li::before {
+
+            content: "✓";
+
+            position: absolute;
+
+            left: 0;
+
+            color: #9DD9B5;
+
+            font-weight: 900;
+        }
+
+
+        .telehealth-card {
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.08
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.13
+                );
+
+            border-radius: 12px;
+
+            padding: 35px;
+        }
+
+
+        .telehealth-card h3 {
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================================================
+           INSURANCE
+        ========================================================= */
+
+        .insurance {
+            background: var(--light);
+        }
+
+
+        .insurance-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
+            gap: 25px;
+
+            margin-top: 40px;
+        }
+
+
+        .info-card {
+
+            background: white;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: var(--radius);
+
+            padding: 30px;
+        }
+
+
+        .info-card h3 {
+
+            color: var(--primary);
+
+            margin-bottom: 12px;
+        }
+
+
+        .info-card p {
+
+            color: var(--text-light);
+        }
+
+
+        .insurance-list {
+
+            margin-top: 20px;
+
+            line-height: 1.9;
+        }
+
+
+        .insurance-note {
+
+            margin-top: 18px;
+
+            font-size: 0.85rem;
+
+            padding-top: 15px;
+
+            border-top:
+                1px solid
+                var(--border);
+        }
+
+
+        /* =========================================================
+           FAQ
+        ========================================================= */
+
+        .faq {
+            background: white;
+        }
+
+
+        .faq-container {
+
+            max-width: 850px;
+
+            margin: 40px auto 0;
+        }
+
+
+        .faq-item {
+
+            border-bottom:
+                1px solid
+                var(--border);
+        }
+
+
+        .faq-question {
+
+            width: 100%;
+
+            border: none;
+
+            background: white;
+
+            text-align: left;
+
+            padding: 20px 5px;
+
+            color: var(--primary);
+
+            font-size: 1rem;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        .faq-question:hover {
+            color: var(--accent);
+        }
+
+
+        .faq-answer {
+
+            display: none;
+
+            padding:
+                0 5px 20px;
+
+            color: var(--text-light);
+
+            font-size: 0.95rem;
+        }
+
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+
+        .faq-symbol {
+
+            font-size: 1.3rem;
+
+            flex-shrink: 0;
+        }
+
+
+        /* =========================================================
+           APPOINTMENT
+        ========================================================= */
+
+        .appointment {
+
+            background: var(--light-blue);
+        }
+
+
+        .appointment-box {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            background: white;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 14px;
+
+            padding: 55px 40px;
+
+            text-align: center;
+
+            box-shadow: var(--shadow-md);
+        }
+
+
+        .appointment-box p {
+
+            max-width: 680px;
+
+            margin:
+                0 auto 28px;
+
+            color: var(--text-light);
+
+            font-size: 1.05rem;
+        }
+
+
+        .appointment-note {
+
+            margin-top: 18px;
+
+            color: #6B7B87;
+
+            font-size: 0.84rem;
+        }
+
+
+        /* =========================================================
+           CRISIS NOTICE
+        ========================================================= */
+
+        .crisis {
+
+            background: var(--danger-light);
+
+            border-top:
+                1px solid
+                #F3C5C0;
+
+            border-bottom:
+                1px solid
+                #F3C5C0;
+
+            padding: 30px 0;
+        }
+
+
+        .crisis-content {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 18px;
+        }
+
+
+        .crisis-icon {
+
+            font-size: 1.4rem;
+
+            flex-shrink: 0;
+        }
+
+
+        .crisis h3 {
+
+            color: var(--danger);
+
+            margin-bottom: 5px;
+
+            font-size: 1rem;
+        }
+
+
+        .crisis p {
+
+            color: #63332F;
+
+            font-size: 0.91rem;
+        }
+
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact {
+            background: white;
+        }
+
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+            margin-top: 40px;
+        }
+
+
+        .contact-card {
+
+            background: var(--light);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 9px;
+
+            padding: 27px;
+        }
+
+
+        .contact-card h3 {
+
+            color: var(--primary);
+
+            font-size: 1rem;
+
+            margin-bottom: 8px;
+        }
+
+
+        .contact-card p {
+
+            color: var(--text-light);
+
+            font-size: 0.92rem;
+        }
+
+
+        .contact-card a {
+
+            color: var(--accent);
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+
+            background: #132735;
+
+            color: #B9C8D1;
+
+            padding: 55px 0 25px;
+        }
+
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.4fr
+                1fr
+                1fr;
+
+            gap: 50px;
+        }
+
+
+        .footer-brand {
+
+            color: white;
+
+            font-size: 1.3rem;
+
+            font-weight: 800;
+
+            margin-bottom: 10px;
+        }
+
+
+        .footer-description {
+
+            max-width: 430px;
+
+            font-size: 0.88rem;
+        }
+
+
+        .footer-column h3 {
+
+            color: white;
+
+            font-size: 0.9rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.8px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .footer-links {
+
+            list-style: none;
+        }
+
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+
+        .footer-links a {
+
+            text-decoration: none;
+
+            color: #B9C8D1;
+
+            font-size: 0.86rem;
+        }
+
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+
+        .footer-bottom {
+
+            border-top:
+                1px solid
+                #304654;
+
+            margin-top: 40px;
+
+            padding-top: 20px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            font-size: 0.78rem;
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .provider-grid,
+            .telehealth-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
         @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 1rem; text-align: center; }
-            .nav-links a { margin: 0 1rem; }
-            .about-section { grid-template-columns: 1fr; justify-items: center; text-align: center; }
-            .hero h1 { font-size: 2rem; }
-            .tabs-header { flex-direction: column; gap: 0.5rem; }
-            .tab-btn { width: 100%; text-align: center; }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .container {
+
+                width:
+                    min(
+                        100% - 30px,
+                        var(--max-width)
+                    );
+            }
+
+
+            .menu-toggle {
+                display: block;
+            }
+
+
+            .nav-links {
+
+                display: none;
+
+                position: absolute;
+
+                left: 0;
+
+                right: 0;
+
+                top: 76px;
+
+                background: white;
+
+                border-bottom:
+                    1px solid
+                    var(--border);
+
+                padding: 20px;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 0;
+
+                box-shadow: var(--shadow-md);
+            }
+
+
+            .nav-links.active {
+                display: flex;
+            }
+
+
+            .nav-links a {
+
+                padding: 13px 10px;
+
+                border-bottom:
+                    1px solid
+                    var(--border);
+            }
+
+
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+
+
+            .nav-cta {
+
+                text-align: center;
+
+                margin-top: 8px;
+            }
+
+
+            .hero {
+
+                padding:
+                    80px 0
+                    75px;
+            }
+
+
+            .hero h1 {
+                font-size: 2.55rem;
+            }
+
+
+            .trust-items {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .trust-item:nth-child(2) {
+                border-right: none;
+            }
+
+
+            .trust-item:nth-child(1),
+            .trust-item:nth-child(2) {
+
+                border-bottom:
+                    1px solid
+                    var(--border);
+            }
+
+
+            .services-grid,
+            .conditions-grid,
+            .insurance-grid,
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .process-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+
+            .appointment-box {
+
+                padding:
+                    40px 22px;
+            }
+
+
+            .crisis-content {
+
+                flex-direction: column;
+
+                gap: 8px;
+            }
         }
+
+
+        @media (max-width: 480px) {
+
+            .logo-main {
+                font-size: 1.2rem;
+            }
+
+
+            .logo-sub {
+                font-size: 0.57rem;
+            }
+
+
+            .hero h1 {
+                font-size: 2.15rem;
+            }
+
+
+            .hero-buttons {
+
+                flex-direction: column;
+            }
+
+
+            .hero-buttons .btn {
+
+                width: 100%;
+            }
+
+
+            .trust-item {
+
+                font-size: 0.82rem;
+            }
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+
+            *,
+            *::before,
+            *::after {
+
+                transition: none !important;
+
+                animation: none !important;
+            }
+        }
+
     </style>
+
 </head>
+
+
 <body>
 
-    <header>
-        <nav class="nav-container">
-            <a href="#" class="logo-group">
-                <span class="logo-main">Novare Health Solutions</span>
-                <span class="logo-sub">Outpatient Behavioral Health</span>
+
+<a href="#main-content" class="skip-link">
+    Skip to main content
+</a>
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <div class="container nav-container">
+
+
+        <a
+            href="#home"
+            class="logo"
+            aria-label="Novare Health Solutions home">
+
+            <span class="logo-main">
+                Novare Health Solutions
+            </span>
+
+            <span class="logo-sub">
+                Outpatient Behavioral Health
+            </span>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+
+        <nav
+            class="nav-links"
+            id="navLinks"
+            aria-label="Main navigation">
+
+
+            <a href="#about">
+                About
             </a>
-            <div class="nav-links">
-                <a href="#about">About Us</a>
-                <a href="#principles">Philosophy</a>
-                <a href="#services">Specialties</a>
-                <a href="#intake">Consultation</a>
-            </div>
+
+
+            <a href="#services">
+                Services
+            </a>
+
+
+            <a href="#conditions">
+                Conditions
+            </a>
+
+
+            <a href="#provider">
+                Provider
+            </a>
+
+
+            <a href="#insurance">
+                Insurance
+            </a>
+
+
+            <a href="#faq">
+                FAQ
+            </a>
+
+
+            <a href="#contact">
+                Contact
+            </a>
+
+
+            <a
+                href="https://calendar.app.google/bzsruxLMUgwgSzwo7"
+                class="nav-cta"
+                target="_blank"
+                rel="noopener">
+
+                Request Appointment
+
+            </a>
+
         </nav>
-    </header>
 
-    <section class="hero">
+    </div>
+
+</header>
+
+
+
+<main id="main-content">
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+    class="hero"
+    id="home">
+
+
+    <div class="container">
+
+
         <div class="hero-content">
-            <h1>Clinical Excellence in Outpatient Behavioral Health</h1>
-            <p>Providing independent, comprehensive psychiatric evaluations and specialized medication management across the State of Maryland.</p>
-            <a href="#intake" class="btn-primary">Request a Consultation</a>
-        </div>
-    </section>
 
-    <section id="about" class="container">
-        <div class="about-section">
-            <div class="profile-container">
-                <img src="profile.jpg" alt="Oluchi Ukah, PMHNP-BC" class="profile-photo">
-                <div class="profile-title">Clinical Director</div>
+
+            <div class="hero-badge">
+
+                Outpatient Psychiatry & Behavioral Health
+                • Maryland
+
             </div>
+
+
+            <h1>
+
+                Compassionate Psychiatric Care,
+                <span>
+                    Grounded in Evidence.
+                </span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Novare Health Solutions provides personalized outpatient
+                psychiatric evaluation and medication management for adults
+                seeking thoughtful, evidence-based mental healthcare.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+
+                <a
+                    href="https://calendar.app.google/bzsruxLMUgwgSzwo7"
+                    class="btn btn-primary"
+                    target="_blank"
+                    rel="noopener">
+
+                    Request an Appointment →
+
+                </a>
+
+
+                <a
+                    href="#services"
+                    class="btn btn-secondary">
+
+                    Explore Our Services
+
+                </a>
+
+            </div>
+
+
+            <p class="hero-note">
+
+                Telehealth and in-person care options may be available,
+                subject to provider availability and clinical appropriateness.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TRUST BAR
+========================================================= -->
+
+<div class="trust-bar">
+
+
+    <div class="container trust-items">
+
+
+        <div class="trust-item">
+
+            <span class="trust-icon">
+                ◉
+            </span>
+
+            Adult Psychiatry
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <span class="trust-icon">
+                ✚
+            </span>
+
+            Medication Management
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <span class="trust-icon">
+                ⌁
+            </span>
+
+            Telehealth Options
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <span class="trust-icon">
+                ✓
+            </span>
+
+            Patient-Centered Care
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+    class="about"
+    id="about">
+
+
+    <div class="container">
+
+
+        <div class="about-grid">
+
+
             <div class="about-text">
-                <h2 class="section-title">Professional Care and Guidance</h2>
-                <p>Novare Health Solutions LLC is a dedicated outpatient psychiatric practice providing specialized behavioral healthcare. Led by Oluchi Ukah, a board-certified Psychiatric-Mental Health Nurse Practitioner, our practice delivers thorough diagnostic evaluations and personalized clinical interventions for adults managing complex mental health conditions.</p>
-                <p>We believe that mental wellness requires a systematic, collaborative, and evidence-based framework. Our practice works closely with individuals to develop targeted care paths that stabilize symptoms, restore cognitive clarity, and foster long-term psychological growth. To support modern work and personal schedules, all consultations are conducted via a secure, fully encrypted virtual telehealth platform during dedicated evening and weekend hours.</p>
+
+
+                <div class="section-label">
+                    About Novare
+                </div>
+
+
+                <h2 class="section-title">
+
+                    Thoughtful care for the whole person.
+
+                </h2>
+
+
+                <p>
+
+                    Novare Health Solutions LLC is an outpatient behavioral
+                    health practice focused on providing individualized
+                    psychiatric care for adults throughout Maryland.
+
+                </p>
+
+
+                <p>
+
+                    We recognize that every person's mental health journey
+                    is different. Our approach combines careful psychiatric
+                    assessment, evidence-based treatment, collaborative
+                    decision-making, and ongoing clinical monitoring.
+
+                </p>
+
+
+                <p>
+
+                    Our goal is not simply to manage symptoms. We work with
+                    patients to develop practical treatment plans that support
+                    stability, functioning, and meaningful quality of life.
+
+                </p>
+
+
+                <div class="about-highlight">
+
+                    Your care should be individualized, understandable,
+                    collaborative, and grounded in evidence.
+
+                </div>
+
             </div>
+
+
+            <div class="about-card">
+
+
+                <h3>
+                    Our Approach
+                </h3>
+
+
+                <ul class="check-list">
+
+
+                    <li>
+                        Comprehensive psychiatric assessment
+                    </li>
+
+
+                    <li>
+                        Individualized treatment planning
+                    </li>
+
+
+                    <li>
+                        Evidence-based medication management
+                    </li>
+
+
+                    <li>
+                        Collaborative decision-making
+                    </li>
+
+
+                    <li>
+                        Ongoing monitoring and follow-up
+                    </li>
+
+
+                    <li>
+                        Respectful and patient-centered communication
+                    </li>
+
+                </ul>
+
+            </div>
+
         </div>
-    </section>
 
-    <section id="principles" class="principles-section">
-        <div class="tabs-container">
-            <div class="tabs-header">
-                <button class="tab-btn active" onclick="switchTab(event, 'mission')">Our Mission</button>
-                <button class="tab-btn" onclick="switchTab(event, 'vision')">Our Vision</button>
-                <button class="tab-btn" onclick="switchTab(event, 'values')">Core Values</button>
-            </div>
-            
-            <div id="mission" class="tab-content active">
-                <h3>🎯 Mission Statement</h3>
-                <p>To deliver advanced, compassionate, and evidence-based outpatient psychiatric care that empowers individuals to overcome mental health challenges, restore stability, and rebuild meaningful balance in their daily lives.</p>
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section
+    class="services"
+    id="services">
+
+
+    <div class="container">
+
+
+        <div class="text-center">
+
+
+            <div class="section-label">
+                Our Services
             </div>
 
+
+            <h2 class="section-title">
+
+                Psychiatric care tailored to your needs.
+
+            </h2>
+
+
+            <p class="section-intro">
+
+                Our outpatient services are designed to provide structured,
+                individualized psychiatric care in a supportive environment.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="services-grid">
+
+
+            <article class="service-card">
+
+
+                <div class="service-icon">
+                    ♧
+                </div>
+
+
+                <h3>
+                    Psychiatric Evaluations
+                </h3>
+
+
+                <p>
+
+                    Comprehensive psychiatric assessments to understand
+                    symptoms, history, functioning, and treatment needs.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+
+                <div class="service-icon">
+                    +
+                </div>
+
+
+                <h3>
+                    Medication Management
+                </h3>
+
+
+                <p>
+
+                    Individualized medication evaluation, treatment planning,
+                    monitoring, and follow-up based on clinical needs.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+
+                <div class="service-icon">
+                    ◌
+                </div>
+
+
+                <h3>
+                    Depression & Anxiety
+                </h3>
+
+
+                <p>
+
+                    Assessment and treatment planning for depressive and
+                    anxiety-related symptoms and disorders.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+
+                <div class="service-icon">
+                    ◎
+                </div>
+
+
+                <h3>
+                    ADHD Evaluation
+                </h3>
+
+
+                <p>
+
+                    Comprehensive evaluation and individualized treatment
+                    planning for attention and executive-function concerns.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+
+                <div class="service-icon">
+                    ◇
+                </div>
+
+
+                <h3>
+                    Mood Disorders
+                </h3>
+
+
+                <p>
+
+                    Evaluation and ongoing management of mood-related
+                    psychiatric conditions when clinically appropriate.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+
+                <div class="service-icon">
+                    ♡
+                </div>
+
+
+                <h3>
+                    Trauma-Related Concerns
+                </h3>
+
+
+                <p>
+
+                    Assessment and treatment planning for trauma-related
+                    symptoms and conditions as part of outpatient psychiatric care.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONDITIONS
+========================================================= -->
+
+<section
+    class="conditions"
+    id="conditions">
+
+
+    <div class="container">
+
+
+        <div class="section-label">
+            Conditions We May Treat
+        </div>
+
+
+        <h2 class="section-title">
+
+            Support for a range of mental health concerns.
+
+        </h2>
+
+
+        <p class="section-intro">
+
+            Psychiatric treatment is individualized. During an initial
+            evaluation, your provider will determine whether Novare Health
+            Solutions is an appropriate setting for your needs.
+
+        </p>
+
+
+        <div class="conditions-grid">
+
+
+            <div class="condition">
+                Depression
+            </div>
+
+
+            <div class="condition">
+                Anxiety Disorders
+            </div>
+
+
+            <div class="condition">
+                ADHD
+            </div>
+
+
+            <div class="condition">
+                Bipolar Disorders
+            </div>
+
+
+            <div class="condition">
+                Trauma & PTSD
+            </div>
+
+
+            <div class="condition">
+                Sleep-Related Concerns
+            </div>
+
+
+            <div class="condition">
+                Mood Disorders
+            </div>
+
+
+            <div class="condition">
+                Other Outpatient Psychiatric Concerns
+            </div>
+
+        </div>
+
+
+        <p class="scope-note">
+
+            <strong>Important:</strong>
+
+            Not every condition or clinical situation can be appropriately
+            managed in an outpatient practice. An initial evaluation is
+            required to determine whether our services are appropriate.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROVIDER
+========================================================= -->
+
+<section
+    class="provider"
+    id="provider">
+
+
+    <div class="container">
+
+
+        <div class="provider-grid">
+
+
+            <div class="provider-photo">
+
+
+                <div class="provider-photo-placeholder">
+
+                    PROVIDER PHOTO
+
+                    <br><br>
+
+                    Add your professional headshot here.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="provider-content">
+
+
+                <div class="section-label">
+                    Meet Your Provider
+                </div>
+
+
+                <h2 class="section-title">
+
+                    Oluchi Ukah
+
+                </h2>
+
+
+                <div class="credentials">
+
+                    Psychiatric-Mental Health Nurse Practitioner
+
+                </div>
+
+
+                <p>
+
+                    At Novare Health Solutions, care is built around the
+                    belief that patients deserve to be heard, respected,
+                    and actively involved in decisions about their treatment.
+
+                </p>
+
+
+                <p>
+
+                    Clinical care emphasizes thorough assessment,
+                    evidence-based treatment, clear communication, and
+                    individualized follow-up.
+
+                </p>
+
+
+                <p>
+
+                    The goal is to create a therapeutic environment where
+                    patients can better understand their mental health,
+                    explore appropriate treatment options, and work toward
+                    greater stability and quality of life.
+
+                </p>
+
+
+                <div class="credential-list">
+
+
+                    <span class="credential">
+                        Psychiatric-Mental Health
+                    </span>
+
+
+                    <span class="credential">
+                        Evidence-Based Care
+                    </span>
+
+
+                    <span class="credential">
+                        Patient-Centered
+                    </span>
+
+
+                    <span class="credential">
+                        Maryland
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HOW IT WORKS
+========================================================= -->
+
+<section class="process">
+
+
+    <div class="container">
+
+
+        <div class="text-center">
+
+
+            <div class="section-label">
+                Your Care Journey
+            </div>
+
+
+            <h2 class="section-title">
+
+                Getting started is simple.
+
+            </h2>
+
+
+            <p class="section-intro">
+
+                We aim to make the process of beginning psychiatric care
+                straightforward and comfortable.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <div class="process-card">
+
+
+                <div class="process-number">
+                    1
+                </div>
+
+
+                <h3>
+                    Request an Appointment
+                </h3>
+
+
+                <p>
+
+                    Select an available appointment time through our
+                    online scheduling page.
+
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+
+                <div class="process-number">
+                    2
+                </div>
+
+
+                <h3>
+                    Complete Your Intake
+                </h3>
+
+
+                <p>
+
+                    Complete the required patient forms through the
+                    appropriate secure clinical workflow.
+
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+
+                <div class="process-number">
+                    3
+                </div>
+
+
+                <h3>
+                    Meet With Your Provider
+                </h3>
+
+
+                <p>
+
+                    Your initial visit includes a comprehensive assessment
+                    of your concerns and treatment needs.
+
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+
+                <div class="process-number">
+                    4
+                </div>
+
+
+                <h3>
+                    Begin Your Care Plan
+                </h3>
+
+
+                <p>
+
+                    You and your provider develop an individualized
+                    treatment and follow-up plan.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TELEHEALTH
+========================================================= -->
+
+<section class="telehealth">
+
+
+    <div class="container">
+
+
+        <div class="telehealth-grid">
+
+
+            <div>
+
+
+                <div class="section-label">
+                    Flexible Care
+                </div>
+
+
+                <h2 class="section-title">
+
+                    Mental healthcare that fits your life.
+
+                </h2>
+
+
+                <p>
+
+                    Novare Health Solutions offers outpatient psychiatric
+                    care with telehealth options designed to provide
+                    convenient access to appropriate patients.
+
+                </p>
+
+
+                <ul class="telehealth-list">
+
+
+                    <li>
+                        Convenient virtual appointments
+                    </li>
+
+
+                    <li>
+                        Flexible outpatient care
+                    </li>
+
+
+                    <li>
+                        Private and appropriate care environment
+                    </li>
+
+
+                    <li>
+                        In-person appointments when available
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="telehealth-card">
+
+
+                <h3>
+                    Telehealth Availability
+                </h3>
+
+
+                <p>
+
+                    Telehealth services are provided through an appropriate
+                    secure platform. Patients must be physically located in
+                    a jurisdiction where the provider is authorized to
+                    provide care at the time of the appointment.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INSURANCE
+========================================================= -->
+
+<section
+    class="insurance"
+    id="insurance">
+
+
+    <div class="container">
+
+
+        <div class="text-center">
+
+
+            <div class="section-label">
+                Insurance & Payment
+            </div>
+
+
+            <h2 class="section-title">
+
+                Clear information about your care.
+
+            </h2>
+
+
+            <p class="section-intro">
+
+                Insurance participation and coverage are subject to
+                eligibility, benefits, network status, provider
+                credentialing, payer contracts, and the specific services
+                provided.
+
+            </p>
+
+        </div>
+
+
+        <div class="insurance-grid">
+
+
+            <div class="info-card">
+
+
+                <h3>
+                    Insurance Plans
+                </h3>
+
+
+                <p>
+
+                    Plans may include:
+
+                </p>
+
+
+                <p class="insurance-list">
+
+
+                    <strong>
+                        Carelon Behavioral Health
+                    </strong><br>
+
+
+                    Kaiser Permanente of the Mid-Atlantic<br>
+
+
+                    Ascension (SmartHealth)<br>
+
+
+                    CareFirst BlueCross BlueShield<br>
+
+
+                    Cigna<br>
+
+
+                    Aetna<br>
+
+
+                    Horizon Blue Cross and Blue Shield of New Jersey<br>
+
+
+                    Independence Blue Cross Pennsylvania<br>
+
+
+                    Oxford (Optum)<br>
+
+
+                    Medicare / Medicaid<br>
+
+
+                    UnitedHealthcare (Optum)<br>
+
+
+                    And other participating plans
+
+                </p>
+
+
+                <p class="insurance-note">
+
+                    Please verify your benefits, eligibility, and
+                    network status with your insurance plan before
+                    scheduling an appointment. Insurance participation
+                    does not guarantee coverage for a particular service.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+
+                <h3>
+                    Payment & Self-Pay
+                </h3>
+
+
+                <p>
+
+                    Self-pay options may be available for patients who
+                    prefer to pay directly for services.
+
+                </p>
+
+
+                <p style="margin-top: 18px;">
+
+                    Patients should contact Novare Health Solutions for
+                    current information regarding self-pay rates,
+                    payment methods, and applicable policies.
+
+                </p>
+
+
+                <p style="margin-top: 18px;">
+
+                    Where required by applicable law, uninsured or
+                    self-pay patients may receive information regarding
+                    expected charges before services are provided.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FAQ
+========================================================= -->
+
+<section
+    class="faq"
+    id="faq">
+
+
+    <div class="container">
+
+
+        <div class="text-center">
+
+
+            <div class="section-label">
+                Frequently Asked Questions
+            </div>
+
+
+            <h2 class="section-title">
+
+                Questions before your first visit?
+
+            </h2>
+
+        </div>
+
+
+        <div class="faq-container">
+
+
+            <div class="faq-item">
+
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false">
+
+                    Do you offer telehealth appointments?
+
+                    <span class="faq-symbol">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer">
+
+                    Telehealth appointments may be available depending
+                    on clinical appropriateness, provider availability,
+                    and applicable state requirements.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="faq-item">
+
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false">
+
+                    What happens during my first appointment?
+
+                    <span class="faq-symbol">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer">
+
+                    Your initial appointment generally includes a
+                    comprehensive psychiatric assessment, discussion of
+                    your symptoms and history, review of treatment goals,
+                    and development of an individualized care plan when
+                    appropriate.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="faq-item">
+
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false">
+
+                    Do you prescribe psychiatric medications?
+
+                    <span class="faq-symbol">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer">
+
+                    Medication management may be provided when clinically
+                    appropriate following a comprehensive evaluation.
+                    Treatment decisions are individualized based on your
+                    symptoms, history, goals, and clinical needs.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="faq-item">
+
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false">
+
+                    Do you treat ADHD?
+
+                    <span class="faq-symbol">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer">
+
+                    ADHD evaluation and treatment planning may be available.
+                    A comprehensive assessment is required to determine
+                    the appropriate diagnosis and treatment approach.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="faq-item">
+
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false">
+
+                    Do you provide emergency psychiatric services?
+
+                    <span class="faq-symbol">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer">
+
+                    No. Novare Health Solutions is an outpatient practice
+                    and is not an emergency psychiatric service. If you are
+                    experiencing an immediate mental health emergency,
+                    please call 911, go to the nearest emergency department,
+                    or call/text 988.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="faq-item">
+
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false">
+
+                    How do I schedule an appointment?
+
+                    <span class="faq-symbol">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer">
+
+                    Click the "Request an Appointment" button anywhere
+                    on this website. You will be directed to the Novare
+                    Health Solutions online appointment scheduling page.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="faq-item">
+
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false">
+
+                    Where is Novare Health Solutions located?
+
+                    <span class="faq-symbol">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer">
+
+                    Novare Health Solutions LLC is located at
+                    306 W Redwood St #4332, Baltimore, MD 21201.
+                    Telehealth services may also be available for
+                    eligible patients.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     APPOINTMENT
+========================================================= -->
+
+<section
+    class="appointment"
+    id="appointment">
+
+
+    <div class="container">
+
+
+        <div class="appointment-box">
+
+
+            <div class="section-label">
+                Take the Next Step
+            </div>
+
+
+            <h2 class="section-title">
+
+                Ready to begin your mental health journey?
+
+            </h2>
+
+
+            <p>
+
+                Request an appointment with Novare Health Solutions to
+                discuss your mental health concerns and determine whether
+                our outpatient services are appropriate for you.
+
+            </p>
+
+
+            <a
+                href="https://calendar.app.google/bzsruxLMUgwgSzwo7"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener">
+
+                Schedule Your Appointment →
+
+            </a>
+
+
+            <p class="appointment-note">
+
+                The online scheduling page is for appointment scheduling.
+                Please do not enter detailed medical, psychiatric, or
+                other sensitive health information into the scheduling form.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CRISIS NOTICE
+========================================================= -->
+
+<section class="crisis">
+
+
+    <div class="container">
+
+
+        <div class="crisis-content">
+
+
+            <div class="crisis-icon">
+                ⚠
+            </div>
+
+
+            <div>
+
+
+                <h3>
+
+                    Important: This is not an emergency service.
+
+                </h3>
+
+
+                <p>
+
+                    If you are experiencing a psychiatric or medical
+                    emergency, have thoughts of harming yourself or someone
+                    else, or require immediate assistance, call 911 or go
+                    to the nearest emergency department. You may also call
+                    or text <strong>988</strong> to reach the Suicide &
+                    Crisis Lifeline.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+    class="contact"
+    id="contact">
+
+
+    <div class="container">
+
+
+        <div class="text-center">
+
+
+            <div class="section-label">
+                Contact Novare
+            </div>
+
+
+            <h2 class="section-title">
+
+                We're here to help you get started.
+
+            </h2>
+
+
+            <p class="section-intro">
+
+                Contact Novare Health Solutions to learn more about
+                services, appointment availability, insurance, and
+                the next steps.
+
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+
+                <h3>
+                    Phone
+                </h3>
+
+
+                <p>
+
+                    <a href="tel:+12408229130">
+
+                        240-822-9130
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+
+                <h3>
+                    Email
+                </h3>
+
+
+                <p>
+
+                    <a href="mailto:info@novarehs.com">
+
+                        info@novarehs.com
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+
+                <h3>
+                    Office
+                </h3>
+
+
+                <p>
+
+                    306 W Redwood St #4332<br>
+
+                    Baltimore, MD 21201
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div>
+
+
+                <div class="footer-brand">
+
+                    Novare Health Solutions LLC
+
+                </div>
+
+
+                <p class="footer-description">
+
+                    Outpatient behavioral health and psychiatric services
+                    focused on compassionate, individualized, and
+                    evidence-based care.
+
+                </p>
+
+
+                <p style="margin-top: 15px; font-size: 0.85rem;">
+
+                    306 W Redwood St #4332<br>
+
+                    Baltimore, MD 21201<br>
+
+                    <a
+                        href="tel:+12408229130"
+                        style="color:#B9C8D1;">
+
+                        240-822-9130
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Practice
+                </h3>
+
+
+                <ul class="footer-links">
+
+
+                    <li>
+                        <a href="#about">
+                            About
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#services">
+                            Services
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#conditions">
+                            Conditions
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#provider">
+                            Provider
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#appointment">
+                            Appointments
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Information
+                </h3>
+
+
+                <ul class="footer-links">
+
+
+                    <li>
+                        <a href="#insurance">
+                            Insurance & Payment
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#faq">
+                            FAQ
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="https://calendar.app.google/bzsruxLMUgwgSzwo7"
+                            target="_blank"
+                            rel="noopener">
+
+                            Schedule Appointment
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+
+            <div>
+
+                © <span id="year"></span>
+
+                Novare Health Solutions LLC.
+                All rights reserved.
+
+            </div>
+
+
+            <div>
+
+                Outpatient Behavioral Health & Psychiatry
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+    /* =========================================================
+       MOBILE NAVIGATION
+    ========================================================= */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+
+    const navLinks =
+        document.getElementById("navLinks");
+
+
+    menuToggle.addEventListener(
+        "click",
+        function () {
+
+
+            const isOpen =
+                navLinks.classList.toggle("active");
+
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+
+        }
+    );
+
+
+    /* Close mobile menu after selecting a link */
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(function (link) {
+
+
+            link.addEventListener(
+                "click",
+                function () {
+
+
+                    navLinks.classList.remove(
+                        "active"
+                    );
+
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
+                    );
+
+                }
+            );
+
+        });
+
+
+
+    /* =========================================================
+       FAQ ACCORDION
+    ========================================================= */
+
+    const faqQuestions =
+        document.querySelectorAll(
+            ".faq-question"
+        );
+
+
+    faqQuestions.forEach(
+        function (button) {
+
+
+            button.addEventListener(
+                "click",
+                function () {
+
+
+                    const item =
+                        button.closest(
+                            ".faq-item"
+                        );
+
+
+                    const isOpen =
+                        item.classList.contains(
+                            "open"
+                        );
+
+
+                    /* Close all FAQ items */
+
+                    document
+                        .querySelectorAll(
+                            ".faq-item"
+                        )
+                        .forEach(
+                            function (otherItem) {
+
+
+                                otherItem.classList
+                                    .remove("open");
+
+
+                                const otherButton =
+                                    otherItem.querySelector(
+                                        ".faq-question"
+                                    );
+
+
+                                const otherSymbol =
+                                    otherItem.querySelector(
+                                        ".faq-symbol"
+                                    );
+
+
+                                otherButton.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
+
+
+                                otherSymbol.textContent =
+                                    "+";
+
+                            }
+                        );
+
+
+                    /* Open selected FAQ */
+
+                    if (!isOpen) {
+
+
+                        item.classList.add(
+                            "open"
+                        );
+
+
+                        button.setAttribute(
+                            "aria-expanded",
+                            "true"
+                        );
+
+
+                        const symbol =
+                            item.querySelector(
+                                ".faq-symbol"
+                            );
+
+
+                        symbol.textContent =
+                            "−";
+
+                    }
+
+                }
+            );
+
+        });
+
+
+
+    /* =========================================================
+       CURRENT YEAR
+    ========================================================= */
+
+    document.getElementById(
+        "year"
+    ).textContent =
+        new Date().getFullYear();
+
+
+</script>
+
+
+</body>
+
+</html>
+```
